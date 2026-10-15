@@ -1,0 +1,5 @@
+window,municipality,ags,source,reference_features,candidate_features,reference_overlap_matched,reference_review_overlap,reference_unpaired,candidate_overlap_matched,candidate_review_overlap,candidate_unpaired,split_merge_review,reference_area_m2,candidate_area_m2,area_difference_pct,reference_overlap_match_pct,iou_threshold
+bochum_langendreer,Bochum,05911000,osm,3852,2911,2363,822,667,2363,411,137,416,540099.2,558695.9,3.44,61.34,0.5
+bochum_langendreer,Bochum,05911000,microsoft,3852,1399,453,2581,818,453,768,178,610,540099.2,589345.2,9.12,11.76,0.5
+witten,Witten,05954036,osm,4739,3870,3254,1073,412,3254,428,188,722,990773.4,962704.4,-2.83,68.66,0.5
+witten,Witten,05954036,microsoft,4739,1394,617,3274,848,617,703,74,616,990773.4,897854.3,-9.38,13.02,0.5

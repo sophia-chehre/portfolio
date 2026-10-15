@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeoAI workflows: detection, classification and model adaptation · Sophia Chehreghan</title>
+<meta name="description" content="Five end-to-end deep-learning workflows on aerial and satellite imagery: building extraction, landslide exposure, land-cover classification, prompt-based object detection and palm-tree detection, each with interactive results.">
+<meta property="og:title" content="GeoAI workflows: detection, classification and model adaptation · Sophia Chehreghan">
+<meta property="og:description" content="Five end-to-end deep-learning workflows on aerial and satellite imagery: building extraction, landslide exposure, land-cover classification, prompt-based object detection and palm-tree detection, each with interactive results.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../../index.html">Sophia (Zahra) Chehreghan</a>
+    <nav class="main-nav" aria-label="Main"><a href="../../projects/index.html" aria-current="page">Projects</a><a href="../../experience/index.html">Experience & Education</a><a href="../../cv/index.html">CV</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="project">
+  <header class="project-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="../../projects/index.html">Projects</a> / Applied GeoAI</p>
+      <h1>GeoAI workflows: detection, classification and model adaptation</h1>
+      <p class="lead">Five end-to-end deep-learning workflows on aerial and satellite imagery: building extraction, landslide exposure, land-cover classification, prompt-based object detection and palm-tree detection, each with interactive results.</p>
+      <ul class="toc"><li><a href="#building-extraction-transfer-learning">Building footprint extraction with transfer learning</a></li><li><a href="#landslide-exposure-grenada">Landslide exposure of buildings in Grenada</a></li><li><a href="#land-cover-green-space">Land-cover classification and green-space extraction</a></li><li><a href="#text-prompt-object-detection">Prompt-based object detection with Text SAM</a></li><li><a href="#palm-tree-detection">Palm tree detection with a pretrained model</a></li></ul>
+    </div>
+  </header>
+  <div class="wrap project-body">
+    <section class="block wf" id="building-extraction-transfer-learning">
+  <h2>Building footprint extraction with transfer learning</h2>
+  <p class="lead-sm">A pretrained building-footprint model was fine-tuned with locally labelled examples so that it recognises the building types in new aerial imagery, and its output was compared with that of the unadapted model.</p>
+  <figure class="fig "><img class="" src="../../assets/img/building-extraction/result-detail-800.webp" srcset="../../assets/img/building-extraction/result-detail-800.webp 800w, ../../assets/img/building-extraction/result-detail-1600.webp 1600w" sizes="(min-width: 960px) 60vw, 100vw" width="800" height="441" alt="Aerial view of a residential area with building footprints detected by the adapted model shown in light green" loading="lazy" decoding="async" data-zoom="../../assets/img/building-extraction/result-detail-1600.webp"><figcaption>Footprints detected by the adapted model (light green), including small detached houses.</figcaption></figure>
+  <dl class="meta"><div><dt>Place</dt><dd>Seattle, USA</dd></div>
+  <div><dt>My role</dt><dd>Executed the complete workflow in ArcGIS Pro</dd></div>
+  <div><dt>Tools</dt><dd>ArcGIS Pro, Deep learning, Transfer learning, Instant Apps</dd></div></dl>
+  <ul class="checks"><li>Created labelled training data for a deep-learning model</li><li>Exported image chips and configured model training</li><li>Fine-tuned a pretrained model (transfer learning)</li></ul>
+  <div class="project-links"><a class="btn" href="https://irpud.maps.arcgis.com/apps/instant/compare/index.html?appid=68f6ae6e7ea54b0eb540ba0112dfa756" rel="noopener">Open the comparison web app</a></div>
+</section><section class="block wf" id="landslide-exposure-grenada">
+  <h2>Landslide exposure of buildings in Grenada</h2>
+  <p class="lead-sm">Buildings extracted from aerial imagery with a pretrained deep-learning model were combined with a raster landslide-susceptibility model, to show which buildings stand in higher-susceptibility zones across the island.</p>
+  <figure class="fig "><img class="" src="../../assets/img/landslide-exposure/exposure-detail-800.webp" srcset="../../assets/img/landslide-exposure/exposure-detail-800.webp 800w, ../../assets/img/landslide-exposure/exposure-detail-1600.webp 1600w" sizes="(min-width: 960px) 60vw, 100vw" width="800" height="597" alt="Detected building footprints in grey-blue over landslide susceptibility classes from dark green (very low) to orange (very high)" loading="lazy" decoding="async" data-zoom="../../assets/img/landslide-exposure/exposure-detail-1600.webp"><figcaption>Detected buildings over the five susceptibility classes, from very low (dark green) to very high (orange).</figcaption></figure>
+  <dl class="meta"><div><dt>Place</dt><dd>Grenada</dd></div>
+  <div><dt>My role</dt><dd>Executed the complete workflow in ArcGIS Online</dd></div>
+  <div><dt>Tools</dt><dd>ArcGIS Online, Deep learning (pretrained), Raster analysis, Instant Apps</dd></div></dl>
+  <ul class="checks"><li>Applied a pretrained deep-learning model to extract buildings from aerial imagery</li><li>Built a multi-criteria raster model from four environmental inputs</li><li>Combined vector and raster results in an exposure overlay</li></ul>
+  <div class="project-links"><a class="btn" href="https://irpud.maps.arcgis.com/apps/instant/sidebar/index.html?appid=054b446d4fd54a9896b929d05d18ca05" rel="noopener">Open the interactive web app</a></div>
+</section><section class="block wf" id="land-cover-green-space">
+  <h2>Land-cover classification and green-space extraction</h2>
+  <p class="lead-sm">A high-resolution orthomosaic was classified into nine land-cover classes with a deep-learning model; the classified raster was then turned into vector features and a dedicated green-space layer.</p>
+  <figure class="fig "><img class="" src="../../assets/img/land-cover/land-cover-detail-800.webp" srcset="../../assets/img/land-cover/land-cover-detail-800.webp 800w, ../../assets/img/land-cover/land-cover-detail-1600.webp 1600w" sizes="(min-width: 960px) 60vw, 100vw" width="800" height="441" alt="Dense settlement with extracted green spaces shown in pale green over the imagery" loading="lazy" decoding="async" data-zoom="../../assets/img/land-cover/land-cover-detail-1600.webp"><figcaption>Extracted green spaces (pale green) over the orthomosaic of a dense urban area.</figcaption></figure>
+  <dl class="meta"><div><dt>Place</dt><dd>Alexandra, Johannesburg, South Africa</dd></div>
+  <div><dt>My role</dt><dd>Executed the complete workflow in ArcGIS Pro</dd></div>
+  <div><dt>Tools</dt><dd>ArcGIS Pro, Deep learning, Raster to vector, Instant Apps</dd></div></dl>
+  <ul class="checks"><li>Applied a deep-learning land-cover classification to high-resolution imagery</li><li>Converted a classified raster into vector features</li><li>Filtered classes into a thematic green-space layer</li></ul>
+  <div class="project-links"><a class="btn" href="https://irpud.maps.arcgis.com/apps/instant/basic/index.html?appid=de5aefb1d12946c29fd5bf1fce597a7c" rel="noopener">Open the interactive web app</a></div>
+</section><section class="block wf" id="text-prompt-object-detection">
+  <h2>Prompt-based object detection with Text SAM</h2>
+  <p class="lead-sm">Boats in a marina were detected from the text prompt “boat” with the Text SAM model — no training data needed — and the raw output was cleaned of duplicate and very small false detections.</p>
+  <figure class="fig "><img class="" src="../../assets/img/boat-detection/detections-detail-800.webp" srcset="../../assets/img/boat-detection/detections-detail-800.webp 800w, ../../assets/img/boat-detection/detections-detail-1600.webp 1600w" sizes="(min-width: 960px) 60vw, 100vw" width="800" height="453" alt="Marina with detected boats highlighted in yellow-green" loading="lazy" decoding="async" data-zoom="../../assets/img/boat-detection/detections-detail-1600.webp"><figcaption>Final boat detections in the marina.</figcaption></figure>
+  <dl class="meta"><div><dt>Place</dt><dd>Tuborg Havn, Copenhagen, Denmark</dd></div>
+  <div><dt>My role</dt><dd>Executed the complete workflow in ArcGIS Pro</dd></div>
+  <div><dt>Tools</dt><dd>ArcGIS Pro, Text SAM, Non-maximum suppression, Instant Apps</dd></div></dl>
+  <ul class="checks"><li>Ran a prompt-based foundation model on aerial imagery</li><li>Reviewed raw detections critically</li><li>Removed duplicates with non-maximum suppression and filtered small polygons</li></ul>
+  <div class="project-links"><a class="btn" href="https://irpud.maps.arcgis.com/apps/instant/exhibit/index.html?appid=08e4ab16edf540b68233dbbf65dd7e7e" rel="noopener">Open the interactive web app</a></div>
+</section><section class="block wf" id="palm-tree-detection">
+  <h2>Palm tree detection with a pretrained model</h2>
+  <p class="lead-sm">A ready-to-use palm-tree detection model from ArcGIS Living Atlas was applied to high-resolution imagery of a plantation, producing one bounding box per detected tree for counting and review.</p>
+  <figure class="fig "><img class="" src="../../assets/img/palm-detection/detections-detail-800.webp" srcset="../../assets/img/palm-detection/detections-detail-800.webp 800w, ../../assets/img/palm-detection/detections-detail-1600.webp 1600w" sizes="(min-width: 960px) 60vw, 100vw" width="800" height="441" alt="Plantation imagery with red bounding boxes around detected palm trees" loading="lazy" decoding="async" data-zoom="../../assets/img/palm-detection/detections-detail-1600.webp"><figcaption>Detected palm trees (red boxes) across part of the plantation.</figcaption></figure>
+  <dl class="meta"><div><dt>Place</dt><dd>Kolovai, Tonga</dd></div>
+  <div><dt>My role</dt><dd>Executed the workflow in ArcGIS Pro</dd></div>
+  <div><dt>Tools</dt><dd>ArcGIS Pro, ArcGIS Living Atlas model, Object detection</dd></div></dl>
+  <ul class="checks"><li>Selected and applied a pretrained detection model</li><li>Produced a structured detection layer</li><li>Reviewed results at different scales</li></ul>
+  <div class="project-links"></div>
+</section>
+    <p class="credit small">Imagery and training data: Esri Learn ArcGIS path <a href="https://learn.arcgis.com/en/paths/try-deep-learning-in-arcgis/" rel="noopener">Try geospatial AI tools and models in ArcGIS</a>. Basemaps © Esri and its data partners.</p>
+  </div>
+</article>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap footer-grid">
+    <div>
+      <h2>Contact</h2>
+      <p class="footer-lead">Open to roles and collaborations in spatial planning, geospatial data and applied research.</p>
+      <p><a class="btn" href="mailto:sophia.chehre@gmail.com">Email me</a>
+         <a class="btn btn-ghost" href="https://www.linkedin.com/in/sophia-chehre" rel="noopener">LinkedIn</a>
+         <a class="btn btn-ghost" href="../../files/Sophia-Chehreghan-CV.pdf">CV (PDF)</a></p>
+    </div>
+    <div class="footer-meta">
+      <p>Sophia (Zahra) Chehreghan<br>Ruhr area, Germany<br><a href="mailto:sophia.chehre@gmail.com">sophia.chehre@gmail.com</a><br><a href="mailto:zahra.chehreghan@tu-dortmund.de">zahra.chehreghan@tu-dortmund.de</a></p>
+      <p class="small">This site sets no cookies and uses no analytics. Last updated October 2026.</p>
+    </div>
+  </div>
+</footer>
+<dialog class="lightbox" aria-label="Enlarged image">
+  <form method="dialog"><button class="lightbox-close" aria-label="Close">×</button></form>
+  <img alt="">
+  <p class="lightbox-caption"></p>
+</dialog>
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

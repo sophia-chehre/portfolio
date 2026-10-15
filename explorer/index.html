@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Municipal Building Explorer · Sophia Chehreghan</title>
+<meta name="description" content="Explore how official, community and model-derived building data differ in two German municipal study windows. Reproducible Python analysis, spatial evaluation and inspectable GIS delivery.">
+<link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css"></head>
+<body>
+<a class="skip" href="#map">Skip to map</a>
+<header><a class="brand" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 28V12l9-5v21M12 28V3l10 5v20M22 28V15l7 4v9M1 28h30M16 11h2m-2 5h2m-2 5h2M6 16h2m-2 5h2"/></svg><span>Municipal<br><b>Building Explorer</b></span></a>
+<div class="header-meta"><span class="eyebrow">OPEN URBAN DATA / NORTH RHINE-WESTPHALIA</span><p>Different sources. Visible differences. Better-informed analysis.</p></div>
+<nav aria-label="Project"><button id="methodOpen">Method &amp; limits</button><a href="#downloads">Data &amp; code <span aria-hidden="true">↗</span></a></nav></header>
+<main>
+<section class="explorer" aria-label="Interactive building-data comparison">
+<aside class="sidebar">
+<div class="section-label"><span class="live-dot"></span> A REAL-DATA COMPARISON</div>
+<h1>Read the city.<br><em>Question the data.</em></h1>
+<p class="intro">Compare building outlines, inspect disagreements and trace the evidence behind a municipal inventory.</p>
+<label class="field-label" for="city">01 / Study window</label>
+<select id="city"><option value="bochum_langendreer">Bochum · Langendreer</option><option value="witten">Witten · city centre</option></select>
+<div class="municipal-context"><div><span id="adminType"></span><strong id="ags"></strong></div><p id="district"></p><small id="boundaryDate"></small></div>
+<label class="field-label" for="source">02 / Compare with official ALKIS</label>
+<select id="source"><option value="microsoft">Microsoft · model-derived</option><option value="osm">OpenStreetMap · community</option></select>
+<div class="scope-note"><strong>4 km² study window</strong><span>Not a complete-city inventory</span></div>
+<div class="summary" aria-live="polite"><div><strong id="sourceCount">—</strong><span>compared outlines</span></div><div><strong id="matchRate">—</strong><span>reference overlap-matched</span></div></div>
+<div class="counts-chart"><div class="chart-head"><span>Outlines by source</span><button id="countInfo" aria-label="Explain source counts">i</button></div><div id="bars"></div></div>
+<p class="sidebar-foot">Independent work by <strong>Sophia (Zahra) Chehreghan</strong><br>Python · geospatial QA · spatial evaluation · interactive delivery</p>
+</aside>
+<div class="map-shell">
+<div class="map-toolbar"><div class="segmented" role="group" aria-label="Map view"><button data-mode="agreement" aria-pressed="true">Agreement</button><button data-mode="sources" aria-pressed="false">Sources</button><button data-mode="grid" aria-pressed="false">Grid</button></div><button id="fit" class="fit-btn" title="Fit study window">↗ <span>Study extent</span></button></div>
+<div id="map" tabindex="0" role="region" aria-label="Map showing building outlines and study extent"></div>
+<div id="loading" class="loading"><div class="spinner"></div><strong>Loading real building data</strong><span id="loadMessage">Reading the source comparison…</span></div>
+<div class="map-top-note"><span id="mapWindowLabel">BOCHUM</span><span id="mapModeLabel">OVERLAP AGREEMENT</span></div>
+<div class="map-filter"><label for="filter">Show</label><select id="filter"><option value="all">All compared outlines</option><option value="review_overlap">Overlaps to review</option><option value="unpaired">Unpaired outlines</option><option value="split">Split / merge candidates</option></select><label class="check"><input id="referenceToggle" type="checkbox" checked> Official outlines</label><span id="visibleCount"></span></div>
+<div class="legend" id="legend"><b>Overlap against the official reference</b><div><span class="key matched"></span>Overlap match <span class="key review"></span>Review overlap <span class="key unpaired"></span>Unpaired</div><small>Unpaired does not automatically mean incorrect.</small></div>
+<section id="selection" class="selection" hidden aria-label="Selected building"><button id="closeSelection" aria-label="Close building details">×</button><div class="section-label">INSPECT AN OUTLINE</div><h2 id="selectionTitle"></h2><code id="selectionId"></code><dl id="selectionDetails"></dl><p id="selectionNote"></p></section>
+</div></section>
+<section class="evidence-strip"><div><span class="step-number">01—05</span><h2>A map with a traceable workflow.</h2></div><p>Public inputs → validated geometries → explicit overlap rules → spatial review → reproducible GIS delivery.</p><button id="methodOpen2">Explore the method <span aria-hidden="true">→</span></button></section>
+<section class="below" id="downloads"><div><p class="section-label">GO BEYOND THE MAP</p><h2>Inspect it. Re-run it.<br>Open it in your GIS.</h2><p>This is a bounded analysis of two 2 × 2 km windows. It is designed to make source differences inspectable, not to label one dataset as universal ground truth.</p></div><div class="download-grid"><a href="downloads/source_code.zip"><span>01 / CODE</span><strong>Source &amp; tests</strong><small>Python workflow, requirements and instructions ↗</small></a><a href="downloads/municipal_buildings_gis.zip"><span>02 / GIS</span><strong>GeoPackage + QGIS</strong><small>Projected analysis layers and portable project ↗</small></a><a href="downloads/comparison_summary.csv"><span>03 / RESULTS</span><strong>Comparison table</strong><small>Counts, overlap summaries and scope ↗</small></a><a href="downloads/qa_report.json"><span>04 / QUALITY</span><strong>Validation report</strong><small>Geometry repairs, duplicates and selection ↗</small></a></div></section>
+<footer><span>Independent public-data project · Sophia (Zahra) Chehreghan</span><p>Sources: Geobasis NRW · © OpenStreetMap contributors · Microsoft Global ML Building Footprints. <button id="sourceDetails">Sources, dates &amp; licences</button></p><p>No confidential project material is used. The basemap is provided by OpenStreetMap.</p></footer>
+</main>
+<dialog id="methodDialog"><button class="dialog-close" aria-label="Close method">×</button><p class="section-label">METHOD / SCOPE / PROVENANCE</p><h2>What this comparison can tell you.</h2>
+<div id="methodContent"></div></dialog>
+<script src="vendor/leaflet.js"></script><script src="app.js"></script>
+</body></html>
