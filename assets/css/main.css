@@ -375,6 +375,8 @@ ul.plain li { padding: 6px 0; border-top: 1px solid var(--line); }
 .two-col .xblock { height: 100%; }
 #ils, #circular-rental, #dlab, #workflows, #research, #education { scroll-margin-top: 80px; }
 
+.areas.research-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
 @media (max-width: 1100px) {
   .caps-4, .areas { grid-template-columns: 1fr 1fr; }
   .cards-5 { grid-template-columns: repeat(3, 1fr); }
@@ -382,7 +384,7 @@ ul.plain li { padding: 6px 0; border-top: 1px solid var(--line); }
   .xcard-main { grid-column: span 2; }
 }
 @media (max-width: 640px) {
-  .caps-4, .areas, .xcards { grid-template-columns: 1fr; }
+  .caps-4, .areas, .areas.research-projects, .xcards { grid-template-columns: 1fr; }
   .xcard-main { grid-column: auto; }
   .cards-5 { grid-template-columns: 1fr 1fr; }
   .xblock { padding: 20px; }
