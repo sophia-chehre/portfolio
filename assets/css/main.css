@@ -253,6 +253,7 @@ th:first-child, td:first-child { text-align: left; }
 .cv-what ul { margin: 0; padding-left: 1.1em; }
 .cv-what li { margin-bottom: .3rem; }
 .cv-what p { margin: 0 0 .3rem; }
+.cv-what p, .cv-what li { text-align: justify; hyphens: auto; }
 .cv-used { font-size: .85rem; color: var(--green); }
 .cv-split { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 ul.plain { list-style: none; padding: 0; margin: 0; }
